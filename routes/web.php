@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+
+    $data = [
+        'menu1' => 'Home',
+        'menu2' => 'Contacts',
+        'menu3' => 'Search'
+    ];
+
+    return view('home', $data);
+});
